@@ -25,9 +25,7 @@ foreach ($clientCars as $car) {
     $brand = $car['brand'];
     $garageId = $car['garageId'];
     $garage = isset($garageNames[$garageId]) ? $garageNames[$garageId] : "Garage inconnu";
-    echo "<li>";
-    echo "<strong>Marque :</strong> $brand ";
-    echo "<strong>Modèle :</strong> $model ";
+    echo "<li class='edit-car' data-id='{$car['id']}' style='cursor:pointer; margin-top:20px;'>$brand $model</li>";
     echo "<strong>Garage :</strong> $garage";
     echo "</li>";
 }

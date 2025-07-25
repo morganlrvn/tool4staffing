@@ -15,10 +15,8 @@ foreach ($clientCars as $car) {
     $brand = $car['brand'];
     $color = $car['colorHex'];
 
-    echo "<li>";
-    echo "<strong>Marque :</strong> $brand ";
-    echo "<strong>Modèle :</strong> $model ";
-    echo "<strong>Couleur Voiture:</strong> ";
+    echo "<li class='edit-car' data-id='{$car['id']}' style='cursor:pointer; margin-top:20px;'>$brand $model</li>";
+    echo "<strong>Couleur :</strong> ";
     echo "<span style='display:inline-block; width:12px; height:12px; background:$color;vertical-align:middle;'></span>";
     echo "</li>";
 }
