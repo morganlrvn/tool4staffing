@@ -13,6 +13,7 @@
     <button class="set-client" data-cookie="clientb"> Client B</button>
     <button class="set-client" data-cookie="clientc"> Client C</button>
 
+    <button class="change-module" data-module="garages" data-script="ajax" style="display:none;">Voir les garages</button>
     <div class="dynamic-div" data-module="cars" data-script="ajax"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
