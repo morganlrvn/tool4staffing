@@ -1,4 +1,1 @@
-# Fichiers de cache
-*.log
-*.cache
-*.tmp
+.env
