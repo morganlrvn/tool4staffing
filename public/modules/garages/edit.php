@@ -1,10 +1,9 @@
 <?php
+//on importe le fichier config.php pour avoir acces aux json
+require_once dirname(__DIR__, 3) . '/config.php';
 
-// Chemin des fichiers json
-$jsonFileGarages = $_SERVER['DOCUMENT_ROOT'] . '/data/garages.json';
-
-// Lecture des fichiers json
-$garages = json_decode(file_get_contents($jsonFileGarages), true);
+$cars = json_decode(file_get_contents(DATA_DIR . '/cars.json'), true);
+$garages = json_decode(file_get_contents(DATA_DIR . '/garages.json'), true);
 
 // Récupération du cookie client
 $clientId = $_COOKIE['client'] ?? null;

@@ -1,9 +1,12 @@
 <?php
-$id = $_GET['id'] ?? null;
-$jsonFileCars = $_SERVER['DOCUMENT_ROOT'] . '/data/cars.json';
-$cars = json_decode(file_get_contents($jsonFileCars), true);
+//on importe le fichier config.php pour avoir acces aux json
+require_once dirname(__DIR__, 3) . '/config.php';
+
+$cars = json_decode(file_get_contents(DATA_DIR . '/cars.json'), true);
+$garages = json_decode(file_get_contents(DATA_DIR . '/garages.json'), true);
 
 // Trouver la voiture avec l'id
+$id = $_GET['id'] ?? null;
 $car = null;
 foreach ($cars as $c) {
     if ($c['id'] == $id) {
