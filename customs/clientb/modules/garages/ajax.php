@@ -17,7 +17,6 @@ foreach ($clientGarages as $garage) {
 
     echo "<li class='edit-garage' data-id='$id' style='cursor:pointer; margin-bottom:10px;'>";
     echo "<strong>$title</strong><br>";
-    echo "📍 $address";
     echo "</li>";
 }
 echo "</ul>";
