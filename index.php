@@ -9,9 +9,9 @@
 
 <body>
     <h1>Veuillez choisir un client</h1>
-    <button class="set-client" data-cookie="clienta"> Client A</button>
-    <button class="set-client" data-cookie="clientb"> Client B</button>
-    <button class="set-client" data-cookie="clientc"> Client C</button>
+    <button class="set-client" data-cookie="clienta">Client A</button>
+    <button class="set-client" data-cookie="clientb">Client B</button>
+    <button class="set-client" data-cookie="clientc">Client C</button>
 
     <button class="change-module" data-module="garages" data-script="ajax" style="display:none;">Voir les garages</button>
     <div class="dynamic-div" data-module="cars" data-script="ajax"></div>

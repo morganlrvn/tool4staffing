@@ -1,0 +1,4 @@
+Actions menées pour l'amélioration de la sécurité:
+1) Une clé API était stockée dans un fichier JSON dans le répertoire credentials/.
+Je me suis donc permis pour de question de sécurité et risque de fuite d'information de 
+le mettre dans une .env (qui lui meme est dans le gitignore)

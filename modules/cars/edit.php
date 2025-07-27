@@ -12,11 +12,6 @@ foreach ($cars as $c) {
     }
 }
 
-if (!$car) {
-    echo "<p>Voiture introuvable.</p>";
-    exit;
-}
-
 $brand = $car['brand'];
 $model = $car['modelName'];
 $year = date("Y", $car['year']);

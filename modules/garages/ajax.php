@@ -7,13 +7,13 @@ $jsonFileGarages = $_SERVER['DOCUMENT_ROOT'] . '/data/garages.json';
 $garages = json_decode(file_get_contents($jsonFileGarages), true);
 
 // Récupération du cookie client
-$clientId = $_COOKIE['client'] ?? null;
+$client = $_COOKIE['client'] ?? null;
 
 // Filtrer les garages du client
-$clientGarages = array_filter($garages, fn($g) => $g['customer'] === $clientId);
+$clientGarages = array_filter($garages, fn($g) => $g['customer'] === $client);
 
 // Affichage des garages
-echo "<h2>Garages du client B</h2>";
+echo "<h2>Garages du Client B</h2>";
 echo "<ul>";
 foreach ($clientGarages as $garage) {
     $id = $garage['id'];

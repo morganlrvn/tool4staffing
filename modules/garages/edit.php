@@ -6,8 +6,6 @@ $jsonFileGarages = $_SERVER['DOCUMENT_ROOT'] . '/data/garages.json';
 // Lecture des fichiers json
 $garages = json_decode(file_get_contents($jsonFileGarages), true);
 
-
-
 // Récupération du cookie client
 $clientId = $_COOKIE['client'] ?? null;
 $garageId = $_GET['id'] ?? null;

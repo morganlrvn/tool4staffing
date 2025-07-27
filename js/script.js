@@ -32,7 +32,7 @@ $(document).ready(function () {
         // Afficher bouton "Voir les garages" si clientb
         updateVisibleButtons()
 
-        const url = `customs/${cookie}/modules/${module}/${script}.php`;
+        const url = `modules/${module}/${script}.php`;
         $(".dynamic-div").load(url);
     });
 
@@ -49,7 +49,7 @@ $(document).ready(function () {
         $(".dynamic-div").attr("data-module", module);
         $(".dynamic-div").attr("data-script", script);
 
-        const url = `customs/${cookie}/modules/${module}/${script}.php`;
+        const url = `modules/${module}/${script}.php`;
         $(".dynamic-div").load(url);
     });
 
@@ -60,8 +60,8 @@ $(document).ready(function () {
     $(".dynamic-div").on("click", ".edit-garage", function () {
         const id = $(this).data("id");
         const module = $(".dynamic-div").attr("data-module");
-        const cookie = getClientFromCookie();
-        const url = `customs/${cookie}/modules/${module}/edit.php?id=${id}`;
+        const client = getClientFromCookie();
+        const url = `modules/${module}/edit.php?id=${id}&client=${client}`;
         $(".dynamic-div").load(url);
     });
 
@@ -70,9 +70,9 @@ $(document).ready(function () {
      */
     $(".dynamic-div").on("click", ".edit-car", function () {
         const id = $(this).data("id");
-        const cookie = getClientFromCookie();
+        const client = getClientFromCookie();
         const module = $(".dynamic-div").data("module");
-        const url = `edit.php?id=${id}&client=${cookie}&module=${module}`;
+        const url = `modules/${module}/edit.php?id=${id}&client=${client}`;
         $(".dynamic-div").load(url);
     });
 
@@ -84,7 +84,7 @@ $(document).ready(function () {
         const module = $(".dynamic-div").data("module");
         const cookie = getClientFromCookie();
 
-        const url = `customs/${cookie}/modules/${module}/ajax.php`;
+        const url = `modules/${module}/ajax.php`;
         $(".dynamic-div").load(url);
     });
 });
