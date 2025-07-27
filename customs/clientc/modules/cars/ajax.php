@@ -1,8 +1,13 @@
 <?php
+
+// Chemin des fichiers json
 $jsonFileCars = $_SERVER['DOCUMENT_ROOT'] . '/data/cars.json';
 
-$clientId = 'clientc';
+// Lecture des fichiers json
 $cars = json_decode(file_get_contents($jsonFileCars), true);
+
+// Récupération du cookie client
+$clientId = $_COOKIE['client'] ?? null;
 
 // Filtrer les voitures du client
 $clientCars = array_filter($cars, fn($car) => $car['customer'] === $clientId);

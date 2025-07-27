@@ -1,13 +1,18 @@
 <?php
+
+// Chemin des fichiers json
 $jsonFileGarages = $_SERVER['DOCUMENT_ROOT'] . '/data/garages.json';
+
+// Lecture des fichiers json
 $garages = json_decode(file_get_contents($jsonFileGarages), true);
 
-$clientId = 'clientb'; // pour ce module uniquement
+// Récupération du cookie client
+$clientId = $_COOKIE['client'] ?? null;
 
-// Filtrer garages du client
+// Filtrer les garages du client
 $clientGarages = array_filter($garages, fn($g) => $g['customer'] === $clientId);
 
-// Affichage
+// Affichage des garages
 echo "<h2>Garages du client B</h2>";
 echo "<ul>";
 foreach ($clientGarages as $garage) {
